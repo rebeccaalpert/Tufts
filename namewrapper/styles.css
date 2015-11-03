@@ -4,7 +4,7 @@ body {
 
 div {
 	background-color: #f6f6f6;
-	font-family: Gudea, Tahoma, sans-serif;
+	font-family: Gudea, Verdana, sans-serif;
 	font-size: 18px;
 	line-height: 18px;
 	color: #333333;
@@ -15,14 +15,21 @@ div {
 	width: 600px;
 }
 
-h1, h2 {
-	font-family: Georgia, Tahoma, sans-serif;
+h1 {
+	font-family: Verdana, sans-serif;
+	font-size: 30px;
+	color: #333333;
+}
+
+h2 {
+	font-family: Verdana, sans-serif;
+	font-size: 25px;
 	color: #333333;
 }
 
 textarea {
 	display: block;
-	font-family: Gudea, Tahoma, sans-serif;
+	font-family: Gudea, Verdana, sans-serif;
 	font-size: 20px;
 	line-height: 22px;
 	width: 600px;
@@ -34,7 +41,7 @@ textarea {
 button {
 	background-color: #418FDE;
 	color: #fff;
-	font-family: Gudea, Tahoma, sans-serif;
+	font-family: Gudea, Verdana, sans-serif;
 	font-size: 18px;
 	line-height: 22px;
 	padding: .5em .5em .5em .5em;
