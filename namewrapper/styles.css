@@ -1,10 +1,27 @@
-h1 {
+body {
+	padding: 3em 3em 3em 3em;
+}
+
+div {
+	background-color: #C6BEB5;
+	font-family: Gudea, sans-serif;
+	font-size: 18px;
+	line-height: 18px;
+	color: #333333;
+}
+
+#log {
+	padding: 1em 1em 1em 1em;
+}
+
+h1, h2 {
 	font-family: Georgia, sans-serif;
+	color: #333333;
 }
 
 textarea {
 	display: block;
-	font-family: "Gudea", sans-serif;
+	font-family: Gudea, sans-serif;
 	font-size: 20px;
 	line-height: 22px;
 	height: 100px;
@@ -13,10 +30,10 @@ textarea {
 button {
 	background-color: #418FDE;
 	color: #fff;
-	font-family: "Gudea", sans-serif;
+	font-family: Gudea, sans-serif;
 	font-size: 18px;
 	line-height: 22px;
 	padding: .5em .5em .5em .5em;
 	border: 0;
-	margin: .5em 0em .5em 0em;
+	margin: 1em 0em .5em 0em;
 }
