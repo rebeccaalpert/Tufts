@@ -11,6 +11,7 @@
 	    	$("form").submit(function(event) {
 	    		event.preventDefault();
 				var lines = $('#nameList').val().split('\n'); // names separated by new lines
+				$('#nameList').val(''); // empty box now that we've grabbed the value
 				$.each(lines, function(name) {
 					if(lines[name] != "") {
 						$('#log').append("<div>&lt;div&gt;"+lines[name]+"&lt;/div&gt;</div>");
