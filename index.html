@@ -12,7 +12,9 @@
 	    		event.preventDefault();
 				var lines = $('#nameList').val().split('\n'); // names separated by new lines
 				$.each(lines, function(name) {
-					$('#log').append("<div>&lt;div&gt;"+lines[name]+"&lt;/div&gt;</div");
+					if(lines[name] != "") {
+						$('#log').append("<div>&lt;div&gt;"+lines[name]+"&lt;/div&gt;</div>");
+					}
   				});
   			});
 		});
@@ -26,7 +28,7 @@
 		<button>submit</button>
 	</form>
 	
-	<h2>Output</h2>
+	<h2>Wrapped Names</h2>
 	<div id="log"></div>
 
 </body>
