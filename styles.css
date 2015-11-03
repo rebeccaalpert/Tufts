@@ -1,0 +1,22 @@
+h1 {
+	font-family: Georgia, sans-serif;
+}
+
+textarea {
+	display: block;
+	font-family: "Gudea", sans-serif;
+	font-size: 20px;
+	line-height: 22px;
+	height: 100px;
+}
+
+button {
+	background-color: #418FDE;
+	color: #fff;
+	font-family: "Gudea", sans-serif;
+	font-size: 18px;
+	line-height: 22px;
+	padding: .5em .5em .5em .5em;
+	border: 0;
+	margin: .5em 0em .5em 0em;
+}
