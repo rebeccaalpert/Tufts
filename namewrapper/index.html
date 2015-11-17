@@ -14,7 +14,7 @@
 				$('#nameList').val(''); // empty box now that we've grabbed the value
 				$.each(lines, function(name) {
 					if(lines[name] != "") {
-						$('#log').append("<div>&lt;div&gt;"+lines[name]+"&lt;/div&gt;</div>");
+						$('#log').append('<div>&lt;span class="name"&gt;'+lines[name]+'&lt;/span&gt;</div>');
 					}
   				});
   			});
