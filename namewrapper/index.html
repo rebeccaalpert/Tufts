@@ -10,7 +10,7 @@
 	    $(document).ready(function(){
 	    	$("form").submit(function(event) {
 	    		event.preventDefault();
-				var lines = $('#nameList').val().split('\n').replace(/([~!@#$%^&*()_+=`{}\[\]\|\\:;<>,.\/?])+/g, ' '); // names separated by new lines; remove malicious characters
+				var lines = $('#nameList').val().split('\n'); // names separated by new lines
 				$('#nameList').val(''); // empty box now that we've grabbed the value
 				$.each(lines, function(name) {
 					if(lines[name] != "") {
