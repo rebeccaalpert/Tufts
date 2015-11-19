@@ -1,5 +1,6 @@
 body {
 	margin: 0em 0em 0em 0em;
+	width: 100%;
 }
 
 #log {
@@ -44,7 +45,7 @@ textarea {
 	color: #333333;
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 606px) {
 	body {
 		padding: 3em 3em 3em 3em;
 	}
@@ -55,29 +56,6 @@ textarea {
 	
 	textarea {
 		width: 600px;
-		height: 120px;
-	}
-	
-	h1 {
-		font-size: 30px;
-	}
-	
-	h2 {
-		font-size: 25px;	
-	}
-}
-
-@media screen and (min-width: 606px) and (max-width: 750px) {
-	body {
-		padding: 3em 3em 3em 3em;
-	}
-	
-	#log {
-		width: 50%
-	}
-	
-	textarea {
-		width: 50%
 		height: 120px;
 	}
 	
@@ -92,8 +70,7 @@ textarea {
 
 @media screen and (max-width: 605px) {
 	body {
-		padding: 0em 0em 0em 0em;
-		width: 100%;
+		padding: 0em .5em 0em .5em;
 	}
 	
 	#log {
