@@ -14,7 +14,7 @@
 			var lines = $('#nameList').val().replace(/[&\/\\#,+()$~%.":*?<>{}]/g, '').split('\n'); // names separated by new lines; prevent cross site scripting
 			$('#nameList').val(''); // empty box now that we've grabbed the value
 			$.each(lines, function(name) {
-				if(lines[name] != "" && lines[name] != " ") {
+				if(lines[name] != "" && lines[name] != " " && lines[name] !== "  ") {
 					$('#log').append('<div>&lt;span class="name"&gt;'+lines[name].trim()+'&lt;/span&gt;</div>');
 				}
   			});
