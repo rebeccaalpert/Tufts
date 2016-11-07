@@ -10,13 +10,14 @@
 	    $(document).ready(function(){
 	    	$("form").submit(function(event) {
 	    		event.preventDefault();
-				var lines = $('#nameList').val().replace(/[&\/\\#,+()$~%.":*?<>{}]/g, '').split('\n'); // names separated by new lines; prevent cross site scripting
+				var lines = $('#nameList').val().replace(/[&\/\\#,+()$~%.":*?<>{}]/g, '').split('\n'); // names separated by new lines
 				$('#nameList').val(''); // empty box now that we've grabbed the value
 				$.each(lines, function(name) {
 					if(lines[name] != "") {
 						$('#log').append('<div>&lt;span class="name"&gt;'+lines[name]+'&lt;/span&gt;</div>');
 					}
   				});
+				$('#log').prepend('<div class="nameGroup">').append('</div>');
   			});
 		});
 	</script>
