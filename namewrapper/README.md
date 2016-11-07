@@ -1,5 +1,3 @@
 # namewrapper
 
-Takes text input via textarea. When form is submitted, each line is wrapped in a hard-coded element.
-
-Now more resistant to cross-site scripting attacks!
+Takes text input via textarea. When form is submitted, it wraps the text in a div and wraps each line in a hard-coded span.
