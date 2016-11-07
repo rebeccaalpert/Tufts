@@ -4,22 +4,22 @@
 
 <head>
 	<title>Name Wrapper</title>
-	<meta name="viewport" content="width=device-width" />
 	<link rel="stylesheet" href="styles.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	<script>
-	$(document).ready(function(){
+	    $(document).ready(function(){
 	    	$("form").submit(function(event) {
 	    		event.preventDefault();
-			var lines = $('#nameList').val().replace(/[&\/\\#,+()$~%.":*?<>{}]/g, '').split('\n'); // names separated by new lines; prevent cross site scripting
-			$('#nameList').val(''); // empty box now that we've grabbed the value
-			$.each(lines, function(name) {
-				if(lines[name] != "" && lines[name] != " " && lines[name] !== "  ") {
-					$('#log').append('<div>&lt;span class="name"&gt;'+lines[name].trim()+'&lt;/span&gt;</div>');
-				}
+				var lines = $('#nameList').val().replace(/[&\/\\#,+()$~%.":*?<>{}]/g, '').split('\n'); // names separated by new lines
+				$('#nameList').val(''); // empty box now that we've grabbed the value
+				$.each(lines, function(name) {
+					if(lines[name] != "") {
+						$('#log').append('<div>&lt;span class="name"&gt;'+lines[name]+'&lt;/span&gt;</div>');
+					}
+  				});
+				$('#log').prepend('<div class="nameGroup">').append('</div>');
   			});
-  		});
-	});
+		});
 	</script>
 </head>
 
@@ -32,5 +32,6 @@
 	
 	<h2>Wrapped Names</h2>
 	<div id="log"></div>
+
 </body>
 </html>
