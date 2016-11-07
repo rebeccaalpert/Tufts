@@ -4,11 +4,11 @@
 
 <head>
 	<title>Name Wrapper</title>
-	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="http://rebeccaalpert.github.io/tufts-utilities/namewrapper/styles.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	<script>
 	    $(document).ready(function(){
-	    	$("form").submit(function(event) {
+	    	$("#submit").click(function(event) {
 	    		event.preventDefault();
 				var lines = $('#nameList').val().replace(/[&\/\\#,+()$~%.":*?<>{}]/g, '').split('\n'); // names separated by new lines
 				$('#nameList').val(''); // empty box now that we've grabbed the value
@@ -19,6 +19,9 @@
   				});
 				$('#log').prepend('<br />').prepend('&lt;div class="nameGroup"&gt;').append('&lt;/div&gt;');
   			});
+			$('#reset').click(function(){
+				$('#log').empty();
+			});
 		});
 	</script>
 </head>
@@ -27,8 +30,10 @@
 	<h1>Name Wrapper</h1>
 	<form>
 		<textarea id="nameList" name="nameList" placeholder="Enter one name per line"></textarea>
-		<button>submit</button>
+		<button id="submit">submit</button>
+        <button id="reset">reset</button>
 	</form>
+    
 	
 	<h2>Wrapped Names</h2>
 	<div id="log"></div>
