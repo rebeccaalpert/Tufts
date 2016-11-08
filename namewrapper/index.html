@@ -10,6 +10,9 @@
 	    $(document).ready(function(){
 	    	$("#submit").click(function(event) {
 	    		event.preventDefault();
+				if ($('#log').length > 0) {
+					$('#log').empty();
+				}
 				var lines = $('#nameList').val().replace(/[&\/\\#,+()$~%.":*?<>{}]/g, '').split('\n'); // names separated by new lines
 				$('#nameList').val(''); // empty box now that we've grabbed the value
 				$.each(lines, function(name) {
@@ -19,9 +22,6 @@
   				});
 				$('#log').prepend('<br />').prepend('&lt;div class="nameGroup"&gt;').append('&lt;/div&gt;');
   			});
-			$('#reset').click(function(){
-				$('#log').empty();
-			});
 		});
 	</script>
 </head>
@@ -31,7 +31,6 @@
 	<form>
 		<textarea id="nameList" name="nameList" placeholder="Enter one name per line"></textarea>
 		<button id="submit">submit</button>
-        <button id="reset">reset</button>
 	</form>
     
 	
